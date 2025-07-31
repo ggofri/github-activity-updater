@@ -1,0 +1,101 @@
+name: 'GitHub README Activity Updater'
+description: 'Updates README.md with recent GitHub activity between comment markers'
+author: 'ggofri'
+
+inputs:
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+  username:
+    description: 'GitHub username to fetch activity for'
+    required: true
+  max-events:
+    description: 'Maximum number of events to display'
+    required: false
+    default: '5'
+  readme-path:
+    description: 'Path to README file'
+    required: false
+    default: 'README.md'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Update GitHub activity
+      shell: bash
+      run: |
+        # Fetch recent GitHub events
+        activity_data=$(curl -s -H "Authorization: token ${{ inputs.github-token }}" \
+          "https://api.github.com/users/${{ inputs.username }}/events/public?per_page=${{ inputs.max-events }}")
+        
+        # Create temporary file for activity content
+        activity_content=$(mktemp)
+        
+        # Parse and format activity data
+        echo "$activity_data" | jq -r '
+          .[] | 
+          select(.type == "PushEvent" or .type == "IssuesEvent" or .type == "PullRequestEvent" or .type == "IssueCommentEvent" or .type == "CreateEvent") |
+          "\(.created_at)|\(.type)|\(.repo.name)|\(.payload)"
+        ' | head -${{ inputs.max-events }} | while IFS='|' read -r date type repo payload; do
+          # Format date
+          formatted_date=$(date -d "$date" "+%b %d" 2>/dev/null || echo "Recent")
+          
+          # Create activity line based on event type
+          case "$type" in
+            "PushEvent")
+              echo "- 🚀 Pushed commits to [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
+              ;;
+            "PullRequestEvent") 
+              echo "- 🔄 Opened/updated PR in [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
+              ;;
+            "IssuesEvent")
+              echo "- 🐛 Created/updated issue in [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
+              ;;
+            "IssueCommentEvent")
+              echo "- 💬 Commented on issue in [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
+              ;;
+            "CreateEvent")
+              echo "- ✨ Created repository or branch [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
+              ;;
+          esac
+        done
+        
+        # Update README.md between activity comments
+        awk '
+        /<!--START_SECTION:activity-->/ { 
+          print; 
+          system("cat '"$activity_content"'"); 
+          skip=1; 
+          next 
+        }
+        /<!--END_SECTION:activity-->/ { 
+          skip=0 
+        }
+        !skip { print }
+        ' ${{ inputs.readme-path }} > README.tmp && mv README.tmp ${{ inputs.readme-path }}
+        
+        rm -f "$activity_content"
+
+    - name: Check for changes
+      id: verify-changed-files
+      shell: bash
+      run: |
+        if git diff --quiet HEAD -- ${{ inputs.readme-path }}; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      shell: bash
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ${{ inputs.readme-path }}
+        git commit -m "docs: update README with recent GitHub activity"
+        git push
+
+branding:
+  icon: 'activity'
+  color: 'blue'
