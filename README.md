@@ -1,6 +1,6 @@
 # GitHub README Activity Updater
 
-A GitHub Action that automatically updates your README.md with recent GitHub activity.
+A GitHub Action that automatically updates your README.md with recent GitHub activity. Everything in a _101 lines yaml_!
 
 *Inspired by [jamesgeorge007/github-activity-readme](https://github.com/jamesgeorge007/github-activity-readme)*
 
@@ -43,7 +43,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Update GitHub Activity
-        uses: ggofri/github-readme-activity@v1
+        uses: ggofri/github-activity-updater@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           username: your-username
