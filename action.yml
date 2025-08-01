@@ -37,47 +37,87 @@ runs:
         temp_events=$(mktemp)
         activity_content=$(mktemp)
         trap 'rm -f "$temp_events" "$activity_content"' EXIT
+        
         debug_log() { [ "$debug" = "true" ] && echo "DEBUG: $*" >&2; }
-        debug_log "Fetching GitHub activity for user: $username"
+        error_exit() { echo "ERROR: $*" >&2; exit 1; }
+        
+        debug_log "Starting GitHub activity fetch for user: $username"
+        debug_log "Max events: $max_events, README path: $readme"
+        
+        [ ! -f "$readme" ] && error_exit "README file not found: $readme"
+        
+        if ! grep -q "<!--START_SECTION:activity-->" "$readme" || ! grep -q "<!--END_SECTION:activity-->" "$readme"; then
+          error_exit "README missing required comment markers: <!--START_SECTION:activity--> and <!--END_SECTION:activity-->"
+        fi
+        
         page=1
-        while [ "$page" -le 10 ]; do
+        total_collected=0
+        while [ "$page" -le 10 ] && [ "$total_collected" -lt "$max_events" ]; do
           auth_header=""
           [ -n "$token" ] && auth_header="Authorization: Bearer $token"
           debug_log "Fetching page $page..."
+          
           api_response=$(curl -s -f ${auth_header:+-H "$auth_header"} \
             "https://api.github.com/users/$username/events/public?per_page=$((max_events * 2))&page=$page") || {
-            echo "API request failed" >&2; exit 1
+            error_exit "API request failed for page $page"
           }
+          
           if echo "$api_response" | jq -e '.message' >/dev/null 2>&1; then
-            echo "GitHub API Error: $(echo "$api_response" | jq -r '.message')" >&2
-            exit 1
+            error_exit "GitHub API Error: $(echo "$api_response" | jq -r '.message')"
           fi
+          
           events_count=$(echo "$api_response" | jq '. | length')
-          [ "$events_count" -eq 0 ] && break
           debug_log "Found $events_count events on page $page"
-          echo "$api_response" | jq -r '.[] | select(.type | test("^(Push|Issues|PullRequest|IssueComment|Create|Release|PullRequestReview|Fork|Watch)Event$")) | "\(.created_at)|\(.type)|\(.repo.name)"' >> "$temp_events"
-          [ "$(wc -l < "$temp_events")" -ge "$max_events" ] && break
+          [ "$events_count" -eq 0 ] && break
+          
+          # Process events and append to temp file
+          echo "$api_response" | jq -r '.[] | select(.type | test("^(Push|Issues|PullRequest|IssueComment|Create|Release|PullRequestReview|Fork|Watch)Event$")) | "\(.created_at)|\(.type)|\(.repo.name)"' >> "$temp_events" || {
+            error_exit "Failed to process API response for page $page"
+          }
+          
+          total_collected=$(wc -l < "$temp_events" 2>/dev/null || echo "0")
+          debug_log "Total events collected so far: $total_collected"
           page=$((page + 1))
         done
-        head -n "$max_events" "$temp_events" | while IFS='|' read -r date type repo; do
-          formatted_date=$(date -d "$date" "+%b %d" 2>/dev/null || date -j -f "%Y-%m-%dT%H:%M:%SZ" "$date" "+%b %d" 2>/dev/null || echo "Recent")
-          case "$type" in
-            PushEvent) echo "- 🚀 Pushed commits to [$repo](https://github.com/$repo) - $formatted_date" ;;
-            PullRequestEvent) echo "- 🔄 Opened/updated PR in [$repo](https://github.com/$repo) - $formatted_date" ;;
-            IssuesEvent) echo "- 🐛 Created/updated issue in [$repo](https://github.com/$repo) - $formatted_date" ;;
-            IssueCommentEvent) echo "- 💬 Commented on issue in [$repo](https://github.com/$repo) - $formatted_date" ;;
-            CreateEvent) echo "- ✨ Created repository or branch [$repo](https://github.com/$repo) - $formatted_date" ;;
-            ReleaseEvent) echo "- 🎉 Released version in [$repo](https://github.com/$repo) - $formatted_date" ;;
-            PullRequestReviewEvent) echo "- 👀 Reviewed PR in [$repo](https://github.com/$repo) - $formatted_date" ;;
-            ForkEvent) echo "- 🍴 Forked [$repo](https://github.com/$repo) - $formatted_date" ;;
-            WatchEvent) echo "- ⭐ Starred [$repo](https://github.com/$repo) - $formatted_date" ;;
-          esac
-        done > "$activity_content"
+        
+        if [ ! -s "$temp_events" ]; then
+          echo "No recent GitHub activity found for user: $username"
+          echo "<!-- No recent activity -->" > "$activity_content"
+        else
+          debug_log "Processing $(wc -l < "$temp_events") total events"
+          head -n "$max_events" "$temp_events" | while IFS='|' read -r date type repo; do
+            [ -z "$date" ] && continue
+            formatted_date=$(date -d "$date" "+%b %d" 2>/dev/null || date -j -f "%Y-%m-%dT%H:%M:%SZ" "$date" "+%b %d" 2>/dev/null || echo "Recent")
+            case "$type" in
+              PushEvent) echo "- 🚀 Pushed commits to [$repo](https://github.com/$repo) - $formatted_date" ;;
+              PullRequestEvent) echo "- 🔄 Opened/updated PR in [$repo](https://github.com/$repo) - $formatted_date" ;;
+              IssuesEvent) echo "- 🐛 Created/updated issue in [$repo](https://github.com/$repo) - $formatted_date" ;;
+              IssueCommentEvent) echo "- 💬 Commented on issue in [$repo](https://github.com/$repo) - $formatted_date" ;;
+              CreateEvent) echo "- ✨ Created repository or branch [$repo](https://github.com/$repo) - $formatted_date" ;;
+              ReleaseEvent) echo "- 🎉 Released version in [$repo](https://github.com/$repo) - $formatted_date" ;;
+              PullRequestReviewEvent) echo "- 👀 Reviewed PR in [$repo](https://github.com/$repo) - $formatted_date" ;;
+              ForkEvent) echo "- 🍴 Forked [$repo](https://github.com/$repo) - $formatted_date" ;;
+              WatchEvent) echo "- ⭐ Starred [$repo](https://github.com/$repo) - $formatted_date" ;;
+            esac
+          done > "$activity_content"
+        fi
+        
+        debug_log "Generated activity content ($(wc -l < "$activity_content") lines)"
+        [ "$debug" = "true" ] && echo "Activity content:" >&2 && cat "$activity_content" >&2
+        
         awk '
-        /<!--START_SECTION:activity-->/ { print; system("cat '"$activity_content"'"); skip=1; next }
+        /<!--START_SECTION:activity-->/ { 
+          print; 
+          system("cat '"$activity_content"'"); 
+          skip=1; 
+          next 
+        }
         /<!--END_SECTION:activity-->/ { skip=0 }
         skip==0 { print }
-        ' "$readme" > "$readme.tmp" && mv "$readme.tmp" "$readme"
+        ' "$readme" > "$readme.tmp" || error_exit "Failed to process README file"
+        
+        mv "$readme.tmp" "$readme" || error_exit "Failed to update README file"
+        debug_log "Successfully updated $readme"
 
     - name: Check for changes
       id: verify-changed-files
