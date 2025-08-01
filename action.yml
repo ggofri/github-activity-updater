@@ -70,7 +70,6 @@ runs:
           debug_log "Found $events_count events on page $page"
           [ "$events_count" -eq 0 ] && break
           
-          # Process events and append to temp file
           echo "$api_response" | jq -r '.[] | select(.type | test("^(Push|Issues|PullRequest|IssueComment|Create|Release|PullRequestReview|Fork|Watch)Event$")) | "\(.created_at)|\(.type)|\(.repo.name)"' >> "$temp_events" || {
             error_exit "Failed to process API response for page $page"
           }
