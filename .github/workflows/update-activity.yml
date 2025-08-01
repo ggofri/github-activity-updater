@@ -24,3 +24,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           username: ggofri
           max-events: 5
+          debug: true
