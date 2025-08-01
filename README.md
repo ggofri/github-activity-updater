@@ -19,11 +19,6 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
 <!--END_SECTION:activity-->
 ```
 
@@ -68,11 +63,9 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
+- 🚀 Pushed commits to [username/repo](https://github.com/username/repo) - Jul 31
+- 💬 Commented on issue in [org/project](https://github.com/org/project) - Jul 30
+- 🔄 Opened/updated PR in [username/another-repo](https://github.com/username/another-repo) - Jul 29
 <!--END_SECTION:activity-->
 ```
 
@@ -93,11 +86,11 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
+- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
 <!--END_SECTION:activity-->
 
 ## License
