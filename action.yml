@@ -54,10 +54,10 @@ runs:
         total_collected=0
         while [ "$page" -le 10 ] && [ "$total_collected" -lt "$max_events" ]; do
           auth_header=""
-          [ -n "$token" ] && auth_header="Authorization: token $token"
+          [ -n "$token" ] && auth_header="Authorization: Bearer $token"
           debug_log "Fetching page $page..."
           
-          api_response=$(curl -s -f ${auth_header:+-H "$auth_header"} \
+          api_response=$(curl -s ${auth_header:+-H "$auth_header"} \
             "https://api.github.com/users/$username/events/public?per_page=$((max_events * 2))&page=$page") || {
             error_exit "API request failed for page $page"
           }
