@@ -1,0 +1,23 @@
+name: Update GitHub Activity
+on:
+  schedule:
+    - cron: "0 12 * * *"  # Daily at 12:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-activity:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update GitHub Activity
+        uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          username: ggofri
+          max-events: 5

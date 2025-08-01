@@ -53,7 +53,7 @@ jobs:
 
 | Input | Description | Required | Default |
 |-------|-------------|----------|---------|
-| `github-token` | GitHub token for API access | Yes | - |
+| `github-token` | GitHub token for API access (optional, but recommended for higher rate limits) | No | - |
 | `username` | GitHub username to fetch activity for | Yes | - |
 | `max-events` | Maximum number of events to display | No | `5` |
 | `readme-path` | Path to README file | No | `README.md` |
@@ -76,6 +76,22 @@ jobs:
 - **IssuesEvent** 🐛 - Issue creation/updates
 - **IssueCommentEvent** 💬 - Comments on issues/PRs
 - **CreateEvent** ✨ - Repository/branch creation
+- **ReleaseEvent** 🎉 - Version releases
+- **PullRequestReviewEvent** 👀 - PR reviews
+- **ForkEvent** 🍴 - Repository forks
+- **WatchEvent** ⭐ - Repository stars
+
+## Live Example
+
+See the action in action with ggofri's recent activity:
+
+<!--START_SECTION:activity-->
+- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Recent
+<!--END_SECTION:activity-->
 
 ## License
 
