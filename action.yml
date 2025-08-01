@@ -4,8 +4,8 @@ author: 'ggofri'
 
 inputs:
   github-token:
-    description: 'GitHub token for API access'
-    required: true
+    description: 'GitHub token for API access (optional, but recommended for higher rate limits)'
+    required: false
   username:
     description: 'GitHub username to fetch activity for'
     required: true
@@ -24,57 +24,55 @@ runs:
     - name: Update GitHub activity
       shell: bash
       run: |
-        # Fetch recent GitHub events
-        activity_data=$(curl -s -H "Authorization: token ${{ inputs.github-token }}" \
-          "https://api.github.com/users/${{ inputs.username }}/events/public?per_page=${{ inputs.max-events }}")
-        
-        # Create temporary file for activity content
+        max_events=${{ inputs.max-events }}
+        per_page=$((max_events * 2))
+        page=1
         activity_content=$(mktemp)
+        temp_events=$(mktemp)
         
-        # Parse and format activity data
-        echo "$activity_data" | jq -r '
-          .[] | 
-          select(.type == "PushEvent" or .type == "IssuesEvent" or .type == "PullRequestEvent" or .type == "IssueCommentEvent" or .type == "CreateEvent") |
-          "\(.created_at)|\(.type)|\(.repo.name)|\(.payload)"
-        ' | head -${{ inputs.max-events }} | while IFS='|' read -r date type repo payload; do
-          # Format date
-          formatted_date=$(date -d "$date" "+%b %d" 2>/dev/null || echo "Recent")
+        while true; do
+          if [ -n "${{ inputs.github-token }}" ]; then
+            activity_data=$(curl -s -H "Authorization: token ${{ inputs.github-token }}" \
+              "https://api.github.com/users/${{ inputs.username }}/events/public?per_page=$per_page&page=$page")
+          else
+            activity_data=$(curl -s \
+              "https://api.github.com/users/${{ inputs.username }}/events/public?per_page=$per_page&page=$page")
+          fi
           
-          # Create activity line based on event type
-          case "$type" in
-            "PushEvent")
-              echo "- 🚀 Pushed commits to [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
-              ;;
-            "PullRequestEvent") 
-              echo "- 🔄 Opened/updated PR in [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
-              ;;
-            "IssuesEvent")
-              echo "- 🐛 Created/updated issue in [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
-              ;;
-            "IssueCommentEvent")
-              echo "- 💬 Commented on issue in [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
-              ;;
-            "CreateEvent")
-              echo "- ✨ Created repository or branch [$repo](https://github.com/$repo) - $formatted_date" >> "$activity_content"
-              ;;
-          esac
+          [ "$(echo "$activity_data" | jq '. | length')" -eq 0 ] && break
+          
+          echo "$activity_data" | jq -r '
+            .[] | 
+            select(.type == "PushEvent" or .type == "IssuesEvent" or .type == "PullRequestEvent" or .type == "IssueCommentEvent" or .type == "CreateEvent" or .type == "ReleaseEvent" or .type == "PullRequestReviewEvent" or .type == "ForkEvent" or .type == "WatchEvent") |
+            "\(.created_at)|\(.type)|\(.repo.name)|\(.payload)"
+          ' >> "$temp_events"
+          
+          [ "$(wc -l < "$temp_events" 2>/dev/null || echo 0)" -ge "$max_events" ] && break
+          [ "$((page += 1))" -gt 10 ] && break
         done
         
-        # Update README.md between activity comments
+        head -$max_events "$temp_events" | while IFS='|' read -r date type repo payload; do
+          formatted_date=$(date -d "$date" "+%b %d" 2>/dev/null || echo "Recent")
+          case "$type" in
+            "PushEvent") echo "- 🚀 Pushed commits to [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "PullRequestEvent") echo "- 🔄 Opened/updated PR in [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "IssuesEvent") echo "- 🐛 Created/updated issue in [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "IssueCommentEvent") echo "- 💬 Commented on issue in [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "CreateEvent") echo "- ✨ Created repository or branch [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "ReleaseEvent") echo "- 🎉 Released version in [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "PullRequestReviewEvent") echo "- 👀 Reviewed PR in [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "ForkEvent") echo "- 🍴 Forked [$repo](https://github.com/$repo) - $formatted_date" ;;
+            "WatchEvent") echo "- ⭐ Starred [$repo](https://github.com/$repo) - $formatted_date" ;;
+          esac
+        done > "$activity_content"
+        
         awk '
-        /<!--START_SECTION:activity-->/ { 
-          print; 
-          system("cat '"$activity_content"'"); 
-          skip=1; 
-          next 
-        }
-        /<!--END_SECTION:activity-->/ { 
-          skip=0 
-        }
+        /<!--START_SECTION:activity-->/ { print; system("cat '"$activity_content"'"); skip=1; next }
+        /<!--END_SECTION:activity-->/ { skip=0 }
         !skip { print }
         ' ${{ inputs.readme-path }} > README.tmp && mv README.tmp ${{ inputs.readme-path }}
         
-        rm -f "$activity_content"
+        rm -f "$activity_content" "$temp_events"
 
     - name: Check for changes
       id: verify-changed-files
