@@ -19,11 +19,11 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
+- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🐛 Created/updated issue in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🔄 Opened/updated PR in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🔄 Opened/updated PR in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
 <!--END_SECTION:activity-->
 ```
 
@@ -68,11 +68,11 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
+- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🐛 Created/updated issue in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🔄 Opened/updated PR in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🔄 Opened/updated PR in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
 <!--END_SECTION:activity-->
 ```
 
@@ -93,11 +93,11 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🎉 Released version in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
-- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Jul 31
+- 🚀 Pushed commits to [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🐛 Created/updated issue in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🔄 Opened/updated PR in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- 🔄 Opened/updated PR in [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
+- ✨ Created repository or branch [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 01
 <!--END_SECTION:activity-->
 
 ## License
