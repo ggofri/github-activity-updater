@@ -19,11 +19,11 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 💬 Commented on issue in [rupali-codes/LinksHub](https://github.com/rupali-codes/LinksHub) - Aug 11
-- 💬 Commented on issue in [vercel/vercel](https://github.com/vercel/vercel) - Aug 09
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
-- 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
-- ✨ Created repository or branch [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
+- 🚀 Pushed commits to [ggofri/LinksHub](https://github.com/ggofri/LinksHub) - Aug 15
+- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🐛 Created/updated issue in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
 <!--END_SECTION:activity-->
 ```
 
@@ -68,11 +68,11 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 💬 Commented on issue in [rupali-codes/LinksHub](https://github.com/rupali-codes/LinksHub) - Aug 11
-- 💬 Commented on issue in [vercel/vercel](https://github.com/vercel/vercel) - Aug 09
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
-- 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
-- ✨ Created repository or branch [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
+- 🚀 Pushed commits to [ggofri/LinksHub](https://github.com/ggofri/LinksHub) - Aug 15
+- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🐛 Created/updated issue in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
 <!--END_SECTION:activity-->
 ```
 
@@ -93,11 +93,11 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
-- 💬 Commented on issue in [rupali-codes/LinksHub](https://github.com/rupali-codes/LinksHub) - Aug 11
-- 💬 Commented on issue in [vercel/vercel](https://github.com/vercel/vercel) - Aug 09
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
-- 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
-- ✨ Created repository or branch [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 09
+- 🚀 Pushed commits to [ggofri/LinksHub](https://github.com/ggofri/LinksHub) - Aug 15
+- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🐛 Created/updated issue in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
+- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 14
 <!--END_SECTION:activity-->
 
 ## License
