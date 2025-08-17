@@ -19,11 +19,11 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
+- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- ✨ Created repository or branch [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
 <!--END_SECTION:activity-->
 ```
 
@@ -68,11 +68,11 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
+- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- ✨ Created repository or branch [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
 <!--END_SECTION:activity-->
 ```
 
@@ -93,11 +93,11 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 15
+- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- ✨ Created repository or branch [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
 <!--END_SECTION:activity-->
 
 ## License
