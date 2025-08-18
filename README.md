@@ -19,11 +19,11 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- ✨ Created repository or branch [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🚀 Pushed commits to [ggofri/eslint-plugin-ban-comments](https://github.com/ggofri/eslint-plugin-ban-comments) - Aug 18
+- ⭐ Starred [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 18
+- ⭐ Starred [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 18
+- ⭐ Starred [ggofri/eslint-plugin-ban-comments](https://github.com/ggofri/eslint-plugin-ban-comments) - Aug 18
+- ⭐ Starred [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 18
 <!--END_SECTION:activity-->
 ```
 
@@ -68,11 +68,11 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- ✨ Created repository or branch [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🚀 Pushed commits to [ggofri/eslint-plugin-ban-comments](https://github.com/ggofri/eslint-plugin-ban-comments) - Aug 18
+- ⭐ Starred [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 18
+- ⭐ Starred [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 18
+- ⭐ Starred [ggofri/eslint-plugin-ban-comments](https://github.com/ggofri/eslint-plugin-ban-comments) - Aug 18
+- ⭐ Starred [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 18
 <!--END_SECTION:activity-->
 ```
 
@@ -93,11 +93,11 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🐛 Created/updated issue in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- 🔄 Opened/updated PR in [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
-- ✨ Created repository or branch [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 17
+- 🚀 Pushed commits to [ggofri/eslint-plugin-ban-comments](https://github.com/ggofri/eslint-plugin-ban-comments) - Aug 18
+- ⭐ Starred [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 18
+- ⭐ Starred [ggofri/github-activity-updater](https://github.com/ggofri/github-activity-updater) - Aug 18
+- ⭐ Starred [ggofri/eslint-plugin-ban-comments](https://github.com/ggofri/eslint-plugin-ban-comments) - Aug 18
+- ⭐ Starred [ggofri/fake-end](https://github.com/ggofri/fake-end) - Aug 18
 <!--END_SECTION:activity-->
 
 ## License
