@@ -19,11 +19,6 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
 <!--END_SECTION:activity-->
 ```
 
@@ -68,11 +63,6 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
 <!--END_SECTION:activity-->
 ```
 
@@ -93,11 +83,6 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Aug 25
 <!--END_SECTION:activity-->
 
 ## License
