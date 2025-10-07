@@ -19,6 +19,9 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
+- 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
+- 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
+- 🍴 Forked [is-a-dev/register](https://github.com/is-a-dev/register) - Oct 06
 <!--END_SECTION:activity-->
 ```
 
@@ -63,6 +66,9 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
+- 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
+- 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
+- 🍴 Forked [is-a-dev/register](https://github.com/is-a-dev/register) - Oct 06
 <!--END_SECTION:activity-->
 ```
 
@@ -83,6 +89,9 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
+- 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
+- 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
+- 🍴 Forked [is-a-dev/register](https://github.com/is-a-dev/register) - Oct 06
 <!--END_SECTION:activity-->
 
 ## License
