@@ -19,6 +19,8 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
+- ✨ Created repository or branch [ggofri/docs](https://github.com/ggofri/docs) - Oct 08
+- ✨ Created repository or branch [ggofri/docs](https://github.com/ggofri/docs) - Oct 08
 - 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
 - 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
 - 🍴 Forked [is-a-dev/register](https://github.com/is-a-dev/register) - Oct 06
@@ -66,6 +68,8 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
+- ✨ Created repository or branch [ggofri/docs](https://github.com/ggofri/docs) - Oct 08
+- ✨ Created repository or branch [ggofri/docs](https://github.com/ggofri/docs) - Oct 08
 - 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
 - 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
 - 🍴 Forked [is-a-dev/register](https://github.com/is-a-dev/register) - Oct 06
@@ -89,6 +93,8 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
+- ✨ Created repository or branch [ggofri/docs](https://github.com/ggofri/docs) - Oct 08
+- ✨ Created repository or branch [ggofri/docs](https://github.com/ggofri/docs) - Oct 08
 - 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
 - 🚀 Pushed commits to [ggofri/register](https://github.com/ggofri/register) - Oct 06
 - 🍴 Forked [is-a-dev/register](https://github.com/is-a-dev/register) - Oct 06
