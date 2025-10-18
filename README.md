@@ -19,6 +19,7 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
+- 💬 Commented on issue in [vercel/vercel](https://github.com/vercel/vercel) - Oct 18
 <!--END_SECTION:activity-->
 ```
 
@@ -63,6 +64,7 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
+- 💬 Commented on issue in [vercel/vercel](https://github.com/vercel/vercel) - Oct 18
 <!--END_SECTION:activity-->
 ```
 
@@ -83,6 +85,7 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
+- 💬 Commented on issue in [vercel/vercel](https://github.com/vercel/vercel) - Oct 18
 <!--END_SECTION:activity-->
 
 ## License
