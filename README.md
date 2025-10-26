@@ -20,9 +20,9 @@ Add the following comment markers to your README.md where you want the activity 
 ## Recent Activity
 <!--START_SECTION:activity-->
 - 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
+- ✨ Created repository or branch [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 <!--END_SECTION:activity-->
 ```
@@ -69,9 +69,9 @@ jobs:
 ## Recent Activity
 <!--START_SECTION:activity-->
 - 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
+- ✨ Created repository or branch [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 <!--END_SECTION:activity-->
 ```
@@ -94,9 +94,9 @@ See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
 - 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🔄 Opened/updated PR in [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
+- ✨ Created repository or branch [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 - 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 25
 <!--END_SECTION:activity-->
 
