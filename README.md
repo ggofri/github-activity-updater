@@ -23,7 +23,6 @@ Add the following comment markers to your README.md where you want the activity 
 - 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 - 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 - ✨ Created repository or branch [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 30
 <!--END_SECTION:activity-->
 ```
 
@@ -72,7 +71,6 @@ jobs:
 - 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 - 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 - ✨ Created repository or branch [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 30
 <!--END_SECTION:activity-->
 ```
 
@@ -97,7 +95,6 @@ See the action in action with ggofri's recent activity:
 - 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 - 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 - ✨ Created repository or branch [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🚀 Pushed commits to [ggofri/ggofri](https://github.com/ggofri/ggofri) - Oct 30
 <!--END_SECTION:activity-->
 
 ## License
