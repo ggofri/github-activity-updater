@@ -19,10 +19,6 @@ Add the following comment markers to your README.md where you want the activity 
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- ✨ Created repository or branch [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 <!--END_SECTION:activity-->
 ```
 
@@ -67,10 +63,6 @@ jobs:
 ```markdown
 ## Recent Activity
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- ✨ Created repository or branch [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 <!--END_SECTION:activity-->
 ```
 
@@ -91,10 +83,6 @@ jobs:
 See the action in action with ggofri's recent activity:
 
 <!--START_SECTION:activity-->
-- 🚀 Pushed commits to [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- 🔄 Opened/updated PR in [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
-- ✨ Created repository or branch [ggofri/mvp-doc-ai](https://github.com/ggofri/mvp-doc-ai) - Nov 01
 <!--END_SECTION:activity-->
 
 ## License
